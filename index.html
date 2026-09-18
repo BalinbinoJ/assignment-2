@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1 class="top_bar">
+    <h1 class="top_bar" id="mainHeader">
         <p>Glen Canyon University</p>
         <p class="tag_line">Forget the Grand when there's the Glen</p>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="event.html">Event</a></li>
-                <li>Upcoming events</li>
-                <li>About</li>
+                <li><a href="#upcomingEvents">Upcoming events</a></li>
+                <li><a href="#aboutList">About</a></li>
             </ul>
         </nav>
     </h1>
@@ -29,6 +29,26 @@
     <img src="campus.jpg" width = "400px"/>
     <figcaption>Our beautiful campus</figcaption>
 </figure>    
+
+<div class="card-container" id="upcomingEvents">
+</div> 
+
+<h1 class="top_bar">About</h1>
+<p>At GCU, we understand academia is your top priority, but there's a wealth of knowledge to enjoy outside of the lecture halls.
+    That's why we do our best to organize events that showcase the most enriching parts of the great state of Arizona and beyond.
+</p>
+
+<ul  id="aboutList">
+    <li>Interact other students beyond your class roster.</li>
+    <li>Expand your horizons and see what you can learn outside of your textbook</li>
+    <li>Reset your brain and enjoy the various forms of recreation we have to offer.</li>
+</ul>
+
+<footer>
+    <p>Copyright 2008</p>
+    <p>Contact us at: glencanyonevents@GCU.edu</p>
+    <a href="#mainHeader">back to top</a> <a href="#upcomingEvents">Upcoming events</a>
+</footer>
     
 </body>
 </html>

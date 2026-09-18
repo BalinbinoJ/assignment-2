@@ -7,3 +7,34 @@
 .tag_line{
     font-size: medium;
 }
+
+#aboutList{
+    background-color: #5f1d1d;
+    padding: 20px;
+    text-align: center;
+}
+
+
+.card-container{
+  padding: 20px;
+  display: grid;
+  height: 300px;
+
+  grid-template-rows:  100px 200px;
+  object-fit: contain;
+  gap: 1.5rem;
+  justify-content: end;
+  align-items: end;
+}
+
+.card-image{
+    width: 10px;
+    height: 10px;
+}
+
+footer{
+    background-color: #919191;
+    padding: 20px;
+    text-align: left;
+    font-size: small;
+}
