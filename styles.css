@@ -1,3 +1,12 @@
+/*
+  Name: Justice Tolentino
+  Date: 09.17.2026
+  CSC 372-01
+
+  This is the styles.css page for my layouts assignment. It acts as the staging area for all of the style changes I
+  want to make to various elements in my html files.
+*/
+
 .top_bar{
     background-color: #5f1d1d;
     padding: 20px;
@@ -53,12 +62,6 @@ footer{
     font-size: small;
 }
 
-@media screen and (width >= 600px) {
-
-  .card-container{
-    align-content: center;
-  }
-}
 
 .flex-container {
   border: 2px;
