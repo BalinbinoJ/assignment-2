@@ -97,3 +97,14 @@ footer{
     height: 800px;
   }
 }
+
+@media screen and (width >= 500px) {
+
+  .card-stack{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+    height: 800px;
+  }
+}
