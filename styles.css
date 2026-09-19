@@ -14,22 +14,36 @@
     text-align: center;
 }
 
-
-.card-container{
-  padding: 20px;
-  display: grid;
-  height: 300px;
-
-  grid-template-rows:  100px 200px;
-  object-fit: contain;
-  gap: 1.5rem;
-  justify-content: end;
-  align-items: end;
+#campusPhoto{
+    align-items: center;
 }
 
-.card-image{
-    width: 10px;
-    height: 10px;
+.card-stack{
+  display: block;
+}
+
+
+.card-container{
+  border: 2px solid black;
+  padding: 5px;
+  display: grid;
+  height: 300px;
+  width: 200px;
+
+  grid-template-rows:  100px 200px;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(126, 24, 24);
+  color: rgb(31, 29, 29);
+}
+
+.card-object{
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 3px;
+    font-size: small;
 }
 
 footer{
@@ -37,4 +51,11 @@ footer{
     padding: 20px;
     text-align: left;
     font-size: small;
+}
+
+@media screen and (width >= 600px) {
+
+  .card-container{
+    align-content: center;
+  }
 }
