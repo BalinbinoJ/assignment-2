@@ -49,6 +49,8 @@ commit 10: Added a media query for the upcoming events section that provides fle
 
 commit 11: added images to the images file. Created a list of images that I used for this project in a separate file named images.
 
+commit 12: Finished composing README.md, added alt text to my images in the html files, and added header comments to all of my files.
+
 
 Semantic elements used:
 
