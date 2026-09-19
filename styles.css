@@ -48,7 +48,7 @@
 
 footer{
     background-color: #919191;
-    padding: 20px;
+    padding: 40px;
     text-align: left;
     font-size: small;
 }
@@ -61,8 +61,8 @@ footer{
 }
 
 .flex-container {
-  padding: 20px;
-  height: 600px;
+  padding: 40px;
+  height: 400px;
   display: flex;
 
   flex-flow: row wrap;
@@ -70,17 +70,29 @@ footer{
   align-items: center;
 }
 
-.flex-card-container{
+#main-content{
   border: 2px solid black;
   padding: 5px;
-  display: flex;
-  height: 300px;
-  width: 200px;
+  display: grid;
+  height: 500px;
+  width: auto;
 
-  grid-template-rows:  100px 200px;
-  gap: 1.5rem;
+  grid-template-columns:  400px 400px;
+  gap: 2.5rem;
   justify-content: center;
   align-items: center;
   background-color: rgb(126, 24, 24);
-  color: rgb(31, 29, 29);
+  color: rgb(0, 0, 0);
+}
+
+
+@media screen and (width <= 500px) {
+
+  #main-content{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    height: 800px;
+  }
 }
