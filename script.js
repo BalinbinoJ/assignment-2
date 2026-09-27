@@ -8,7 +8,7 @@ img.classList.remove('card-container');
 img.classList.add('saved');
 img.removeEventListener('click', save);
 img.addEventListener('click', unsave);
-var saveButton = document.img.querySelector('button');
+var saveButton = img.querySelector('button');
 saveButton.textContent = "Remove";
 }
 
@@ -18,7 +18,7 @@ function unsave(event){
     img.classList.add('card-container');
     img.removeEventListener('click', unsave);
     img.addEventListener('click', save);
-    var saveButton = document.querySelector('img>button');
+    var saveButton = img.querySelector('button');
     saveButton.textContent = "Save";
 }
 
@@ -26,7 +26,7 @@ function addButton(event){
 for (let index = 0; index < cardArray.length; index++) {
 const card = cardArray [index];
 var bttn = document.createElement("button");
-    bttn.textContent = "save"; 
+    bttn.textContent = "Save"; 
     card.appendChild(bttn);
 }
 
