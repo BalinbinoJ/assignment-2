@@ -1,7 +1,4 @@
-/*
-const card = document.querySelector("div.card-container");
-card.addEventListener('click', addBorders);
-*/
+
 function save(event){
 const img = event.currentTarget;
 img.classList.remove('card-container');
@@ -12,6 +9,15 @@ var saveButton = img.querySelector('button');
 saveButton.textContent = "Remove";
 }
 
+function addEvent(event){
+const img = event.currentTarget;
+var eventInfor = img.querySelector('p.card-object');
+var eventClone = eventInfor.cloneNode(true);
+var field = document.querySelector('div.fieldGuy');
+field.appendChild(eventClone);
+img.removeEventListener('click', addEvent);
+}
+
 function unsave(event){
     const img = event.currentTarget;
     img.classList.remove('saved');
@@ -20,6 +26,7 @@ function unsave(event){
     img.addEventListener('click', save);
     var saveButton = img.querySelector('button');
     saveButton.textContent = "Save";
+    field.removeChild(eventClone);
 }
 
 function addButton(event){
@@ -35,7 +42,11 @@ var bttn = document.createElement("button");
 
 function addField(event){
     var field = document.createElement("div");
-    field.className = "nothingSaved";
+    field.className = "fieldGuy";
+    field.textContent = "Nothing saved yet."
+    field.style.padding = "50px";
+    field.style.background = " rgb(126, 24, 24)";
+    field.style.margin = "5px"
     document.body.appendChild(field);
 }
 
@@ -53,4 +64,5 @@ window.addEventListener('load', (event)=>{
 for (let index = 0; index < cardArray.length; index++) {
   const element = cardArray [index];
   element.addEventListener('click', save);
+  element.addEventListener('click', addEvent);
 }

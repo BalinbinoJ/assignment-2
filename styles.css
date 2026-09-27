@@ -89,12 +89,6 @@ display: grid;
   color: rgb(31, 29, 29);
 }
 
-.nothingSaved{
-    padding : 50px;
-    border: 10px;
-    border-color: #5f1d1d;
-    border-style: solid;
-}
 
 #main-content{
   border: 2px solid black;
