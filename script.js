@@ -1,3 +1,12 @@
+/*
+  Name: Justice Tolentino
+  Date: 09.27.2026
+  CSC 372-01
+
+  This is the script.js page for my event handling assignment. This is where I will give my event cards the ability
+  to be saved at the bottom of the home page.
+*/
+
 "use strict";
 
 function save(event){
