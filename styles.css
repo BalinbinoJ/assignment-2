@@ -31,6 +31,20 @@
   display: block;
 }
 
+.btnYup::before{
+  content: "Save";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+  color: black;
+}
+
+.btnSaved::before{
+  content: "Remove";
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+  color: black;
+}
+
 
 .card-container{
   border: 2px solid black;
@@ -89,6 +103,28 @@ display: grid;
   color: rgb(31, 29, 29);
 }
 
+.fieldGuy::before{
+  display: block;
+    padding : 5px;
+    background:  rgb(126, 24, 24);
+    margin : 5px;
+    content: "nothing saved yet";
+    font-family:Courier;
+    color: black;
+    font-size: medium;
+    justify-content: center;
+}
+
+.somethingSaved{
+  display: block;
+    padding : 5px;
+    background:  rgb(126, 24, 24);
+    margin : 5px;
+    font-family:Courier;
+    color: black;
+    font-size: medium;
+    justify-content: center;
+}
 
 #main-content{
   border: 2px solid black;

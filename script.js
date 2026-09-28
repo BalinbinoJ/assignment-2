@@ -1,5 +1,5 @@
 
-function save(event){
+/*function save(event){
 const img = event.currentTarget;
 img.classList.remove('card-container');
 img.classList.add('saved');
@@ -7,17 +7,44 @@ img.removeEventListener('click', save);
 img.addEventListener('click', unsave);
 var saveButton = img.querySelector('button');
 saveButton.textContent = "Remove";
+var eventInfor = img.querySelector('p.card-object');
+var eventClone = eventInfor.cloneNode(true);
+var field = document.querySelector('#eventField');
+field.classList.remove("fieldGuy");
+field.classList.add("somethingSaved");
+    field.appendChild(eventClone);
+}*/
+
+function save(event){
+const img = event.currentTarget;
+const btn = img.querySelector('button');
+img.classList.toggle('saved');
+btn.classList.toggle('btnSaved');
+/*
+var eventInfor = img.querySelector('p.card-object');
+var eventClone = eventInfor.cloneNode(true);
+var field = document.querySelector('#eventField');
+field.classList.remove("fieldGuy");
+field.classList.add("somethingSaved");
+field.appendChild(eventClone);
+*/
 }
 
-function addEvent(event){
+/*function addEvent(event){
 const img = event.currentTarget;
 var eventInfor = img.querySelector('p.card-object');
 var eventClone = eventInfor.cloneNode(true);
 var field = document.querySelector('div.fieldGuy');
-field.appendChild(eventClone);
-img.removeEventListener('click', addEvent);
+if(img.className == 'saved'){
+    field.appendChild(eventClone);
 }
+else{
+    field.removeChild(eventClone);
+}
+}
+*/
 
+/*
 function unsave(event){
     const img = event.currentTarget;
     img.classList.remove('saved');
@@ -27,13 +54,18 @@ function unsave(event){
     var saveButton = img.querySelector('button');
     saveButton.textContent = "Save";
     field.removeChild(eventClone);
+    var field = document.querySelector('div.fieldGuy');
+field.classList.add("fieldGuy");
+field.classList.remove("somethingSaved");
 }
+*/
+
 
 function addButton(event){
 for (let index = 0; index < cardArray.length; index++) {
 const card = cardArray [index];
 var bttn = document.createElement("button");
-    bttn.textContent = "Save"; 
+bttn.className = "btnYup"; 
     card.appendChild(bttn);
 }
 
@@ -42,11 +74,14 @@ var bttn = document.createElement("button");
 
 function addField(event){
     var field = document.createElement("div");
+    field.id = "eventField";
     field.className = "fieldGuy";
-    field.textContent = "Nothing saved yet."
+    /*
+    field.classList.add('nothingSaved');
     field.style.padding = "50px";
     field.style.background = " rgb(126, 24, 24)";
     field.style.margin = "5px"
+    */
     document.body.appendChild(field);
 }
 
@@ -64,5 +99,5 @@ window.addEventListener('load', (event)=>{
 for (let index = 0; index < cardArray.length; index++) {
   const element = cardArray [index];
   element.addEventListener('click', save);
-  element.addEventListener('click', addEvent);
+  //element.addEventListener('click', addEvent);
 }
